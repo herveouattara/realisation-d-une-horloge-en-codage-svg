@@ -1,0 +1,159 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<html lang="fr">
+<head>
+     <meta charset="UTF-8"/>
+	 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	 <meta htpp-equiv="X-UA-compatible" conntent="ie=edge"/>
+	 <title>Mon horloge</title>
+</head>
+<body>
+
+<svg width="1000px" height="1000px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1000 1000" >
+
+    <defs> //permet de definir les objects graphiques pour utilisation ulterieurement
+	      <line x1="0" x2="0" y1="-100" y2="-80" id="horaire" />
+	</defs>
+	
+	
+	//ecriture de exo1 : horloge
+    <g transform="translate(700,100) scale(1.5)">
+	  <g fill="none" stroke="black" stroke-width="1">
+	    <line x1="0" y1="0" x2="0" y2="0"/>
+	  </g>
+	  <text x="-89" y="0" font-size="19" font-family="Verdana" fill="blue">Exercice 1 :</text>
+	  
+	  <text x="30" y="0" font-size="19" font-family="Verdana" fill="blue">Horloge</text>
+	</g>
+	
+	
+	
+	<g transform="translate(700,350)">  //position de mon horloge dans mon repere a l'affichage
+	
+	
+	     //1iere Partie
+        <g style="stroke:black;stroke-width:3;">
+
+                //Construction des aiguilles de mon Horloge( il y'en a 2)
+				
+				
+               <line x1="0" x2="0" y1="0" y2="-60" id="aiguilleSeconde"> //aiguille la plus longue seconde
+			   
+			      //animation de type Xml faisant une rotation de 0 a 360 degre, des aiguilles en meme temps (sum) de maniere indefini
+		          <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0" to="360" dur="60s" additive="sum" repeatCount="indefinite" />
+	           </line>
+			   
+			   
+	           <line x1="0" x2="0" y1="0" y2="-50" id="aiguilleMinutes">//aiguille la plus longue minutes
+			   
+			        //animation de type Xml faisant une rotation de 0 a 360 degre, des aiguilles en meme temps (sum) de maniere indefini
+		           <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0" to="360" dur="3600s" additive="sum" repeatCount="indefinite"  />
+	           </line>
+			   
+			   
+			   <use xlink:href="#horaire" />
+			   
+			   //(text-anchor: middle) : attribut utilisé pour aligne au milieu
+	           <text x="0" y="-70" text-anchor="middle" dominant-baseline="middle" font-size="19" >12</text>
+			   
+			   //pour passer a coter on fait une rotation de 30 degré
+		      <g transform=" rotate(30)">
+		         <use xlink:href="#horaire" /> 
+				                                             //la place bien la lettre 1 qui s'affiche de maniere bizarre
+		             <text x="0" y="0" text-anchor="middle" transform=" translate(0, -70) rotate(-30) "  font-size="19">1</text>
+	          </g>
+			  
+			  
+			  
+			  
+			  
+			   
+			   //pour passer a coter on fait une rotation de 60 degré
+			  <g transform=" rotate(60) ">
+		         <use xlink:href="#horaire" />
+		          <text x="0" y="0" text-anchor="middle" transform=" translate(0, -70) rotate(-60) "   font-size="19" fill="blue">2</text>
+	          </g>
+
+            //pour passer a coter on fait une rotation de 90 degré
+	      <g transform=" rotate(90) ">
+		 <use xlink:href="#horaire" />
+		 <text x="0" y="0" text-anchor="middle" transform=" translate(0 -70) rotate(-90) "  font-family="Arial" font-size="19" fill="blue">3</text>
+	      </g>
+
+           //pour passer a coter on fait une rotation de 120 degré
+	      <g transform=" rotate(120) ">
+		 <use xlink:href="#horaire" />
+		 <text x="0" y="0" text-anchor="middle" transform=" translate(0 -70) rotate(-120) "  font-size="19" fill="blue">4</text>
+	      </g>
+
+            //pour passer a coter on fait une rotation de 150 degré
+	      <g transform=" rotate(150) ">
+		 <use xlink:href="#horaire" />
+		 <text x="0" y="0" text-anchor="middle" transform=" translate(0 -70) rotate(-150) "  font-size="19" fill="blue">5</text>
+	      </g>
+
+           //pour passer a coter on fait une rotation de 180 degré...
+	      <g transform=" rotate(180) ">
+		 <use xlink:href="#horaire" />
+		 <text x="0" y="0" text-anchor="middle" transform=" translate(0 -70) rotate(-180) "  font-size="19" fill="blue">6</text>
+	      </g>
+
+	      <g transform=" rotate(210) ">
+		 <use xlink:href="#horaire" />
+		 <text x="0" y="0" text-anchor="middle" transform=" translate(0 -70) rotate(-210) "  font-size="19" fill="blue">7</text>
+	      </g>
+
+	      <g transform=" rotate(240) ">
+		 <use xlink:href="#horaire" />
+		 <text x="0" y="0" text-anchor="middle" transform=" translate(0 -70) rotate(-240) "  font-size="19" fill="blue">8</text>
+	      </g>
+
+	      <g transform=" rotate(270) ">
+		 <use xlink:href="#horaire" />
+		 <text x="0" y="0" text-anchor="middle" transform=" translate(0 -70) rotate(-270) "   font-size="19" fill="blue">9</text>
+	      </g>
+
+	      <g transform=" rotate(300) ">
+		 <use xlink:href="#horaire" />
+		 <text x="0" y="0" text-anchor="middle" transform=" translate(0 -70) rotate(-300) "  font-size="19" fill="blue">10</text>
+	      </g>
+
+	      <g transform=" rotate(330) ">
+		 <use xlink:href="#horaire" />
+		 <text x="0" y="0" text-anchor="middle" transform=" translate(0 -70) rotate(-330) "  font-size="19" fill="blue">11</text>
+	      </g>
+
+
+        </g>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	    //2ieme Partie
+	    <g style="stroke:blue;stroke-width:10 ;fill:none;">//qui mettra les cercles autour des chiffres(100) de l'horloge et au milieu(2)
+		
+		
+		           <circle r="100" /> //rayon grande cercle autour chiffre
+		           <circle  r="2" />  //rayon petit cercle au centre touche aiguilles
+				   
+				   
+	    </g>
+
+   </g>
+ </svg>
+ 
+ </body>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </html>
